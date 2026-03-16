@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul Fertilizer - Premium Organic Solutions</title>
+    <meta name="description"
+        content="Find the best premium, organic fertilizers at Paul Fertilizer. We offer a wide range of products for all your gardening and agricultural needs.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo" data-i18n="logo">
+                <i class="fa-solid fa-leaf"></i>
+                Paul Fertilizer
+            </a>
+            <div class="nav-controls">
+                <div class="lang-selector">
+                    <select id="langSelect" aria-label="Select Language">
+                        <option value="en">English</option>
+                        <option value="hi">हिन्दी</option>
+                        <option value="bn">বাংলা</option>
+                    </select>
+                </div>
+                <button class="mobile-menu-btn" aria-label="Toggle Navigation">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </button>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" data-i18n="nav_home">Home</a></li>
+                <li><a href="#products" data-i18n="nav_products">Products</a></li>
+                <li><a href="#about" data-i18n="nav_about">About</a></li>
+                <li><a href="javascript:void(0)" class="nav-login" data-i18n="nav_login">Login</a></li>
+                <li><a href="javascript:void(0)" class="btn btn-outline nav-contact" data-i18n="nav_contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 data-i18n="hero_title">Nourish Your Soil,<br><span data-i18n="hero_subtitle">Elevate Your
+                        Harvest.</span></h1>
+                <p data-i18n="hero_desc">Discover our premium selection of organic and specialized fertilizers designed to bring out the best
+                    in your crops and gardens.</p>
+                <a href="#products" class="btn btn-primary" data-i18n="hero_btn">Shop Now</a>
+            </div>
+            <div class="hero-image-wrapper">
+                <img src="paul_fertilizer_hero.png" alt="Paul Fertilizer Shop Storefront" class="hero-image">
+                <div class="glass-card trust-badge">
+                    <i class="fa-solid fa-award"></i>
+                    <div>
+                        <strong data-i18n="trust_title">100% Organic</strong>
+                        <span data-i18n="trust_subtitle">Certified Quality</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </div>
+    </header>
+
+    <section id="products" class="products-section reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="products_title">Our Premium Selection</h2>
+                <p data-i18n="products_desc">Find the perfect nutrient blend for your specific needs.</p>
+            </div>
+
+            <div class="search-container glass-panel">
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="searchInput" placeholder="Search for 'nitrogen', 'orchids', or product name..." data-i18n-placeholder="search_placeholder">
+                </div>
+                <div class="filter-group">
+                    <select id="categoryFilter">
+                        <option value="all" data-i18n="cat_all">All Categories</option>
+                        <option value="organic" data-i18n="cat_organic">Organic</option>
+                        <option value="synthetic" data-i18n="cat_synthetic">Synthetic</option>
+                        <option value="specialty" data-i18n="cat_specialty">Specialty</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="productGrid" class="product-grid">
+                <!-- Products will be injected here by JS -->
+            </div>
+
+            <div id="noResults" class="no-results hidden">
+                <i class="fa-regular fa-face-frown-open"></i>
+                <h3 data-i18n="no_results_title">No products found</h3>
+                <p data-i18n="no_results_desc">Try adjusting your search or filters.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo" data-i18n="logo">
+                    <i class="fa-solid fa-leaf"></i>
+                    Paul Fertilizer
+                </a>
+                <p data-i18n="footer_brand_desc">Premium nutrients for a greener tomorrow.</p>
+            </div>
+            <div class="footer-links">
+                <h4 data-i18n="footer_links_title">Quick Links</h4>
+                <ul>
+                    <li><a href="#home" data-i18n="nav_home">Home</a></li>
+                    <li><a href="#products" data-i18n="nav_products">Products</a></li>
+                    <li><a href="#about" data-i18n="nav_about">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4 data-i18n="footer_contact_title">Contact</h4>
+                <p><i class="fa-solid fa-location-dot"></i> <span data-i18n="address">chebri, khowai, tripura pin 799207</span></p>
+                <p><i class="fa-solid fa-envelope"></i> hello@paulfertilizer.com</p>
+                <p><i class="fa-solid fa-phone"></i> +91 9089456405</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="copyright">&copy; 2026 Paul Fertilizer. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal-overlay hidden">
+        <div class="modal-container">
+            <div class="login-card glass-panel">
+                <button id="closeModal" class="close-modal-btn" aria-label="Close Modal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <header class="login-header">
+                    <div class="logo">
+                        <i class="fa-solid fa-leaf"></i>
+                        <span data-i18n="logo">Paul Fertilizer</span>
+                    </div>
+                    <h2 data-i18n="login_welcome">Welcome Back</h2>
+                    <p data-i18n="login_subtitle">Enter your details to access your account</p>
+                </header>
+
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="email" data-i18n="label_email">Email Address</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" id="email" placeholder="name@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" data-i18n="label_password">Password</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" id="password" placeholder="••••••••" required>
+                        </div>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="remember-me">
+                            <input type="checkbox"> <span data-i18n="label_remember">Remember me</span>
+                        </label>
+                        <a href="#" class="forgot-password" data-i18n="link_forgot">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-login w-100" data-i18n="btn_signin">Sign In</button>
+
+                    <div class="login-footer">
+                        <span data-i18n="login_footer_text">Don't have an account?</span> <a href="#" data-i18n="link_create">Create Account</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal-overlay hidden">
+        <div class="modal-container">
+            <div class="login-card glass-panel">
+                <button id="closeContactModal" class="close-modal-btn" aria-label="Close Modal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <header class="login-header">
+                    <div class="logo">
+                        <i class="fa-solid fa-leaf"></i>
+                        <span data-i18n="logo">Paul Fertilizer</span>
+                    </div>
+                    <h2 data-i18n="contact_title">Send an Enquiry</h2>
+                    <p data-i18n="contact_subtitle">Have questions? Send us a message and we'll get back to you soon.</p>
+                </header>
+
+                <form id="enquiryForm">
+                    <div class="form-group">
+                        <label for="userName" data-i18n="label_name">Name</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id="userName" required placeholder="Enter your name" data-i18n-placeholder="placeholder_name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="userEmail" data-i18n="label_email">Email</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" id="userEmail" required placeholder="Enter your email" data-i18n-placeholder="placeholder_email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="userMessage" data-i18n="label_message">Message</label>
+                        <textarea id="userMessage" rows="4" required placeholder="What are you looking for?" data-i18n-placeholder="placeholder_message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100" data-i18n="btn_submit">Send Message</button>
+                    <div id="formStatus" class="form-status hidden"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
