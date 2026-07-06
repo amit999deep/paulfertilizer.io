@@ -31,11 +31,11 @@
                         <option value="bn">বাংলা</option>
                     </select>
                 </div>
-                <button class="mobile-menu-btn" aria-label="Toggle Navigation">
+                <button class="mobile-menu-btn" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="navLinks">
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                 </button>
             </div>
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks" aria-hidden="true">
                 <li><a href="#home" data-i18n="nav_home">Home</a></li>
                 <li><a href="#products" data-i18n="nav_products">Products</a></li>
                 <li><a href="#about" data-i18n="nav_about">About</a></li>
@@ -48,14 +48,16 @@
     <header id="home" class="hero">
         <div class="container hero-content">
             <div class="hero-text">
-                <h1 data-i18n="hero_title">Nourish Your Soil,<br><span data-i18n="hero_subtitle">Elevate Your
-                        Harvest.</span></h1>
+                <h1>
+                    <span data-i18n="hero_title">Nourish Your Soil,</span><br>
+                    <span data-i18n="hero_subtitle">Elevate Your Harvest.</span>
+                </h1>
                 <p data-i18n="hero_desc">Discover our premium selection of organic and specialized fertilizers designed to bring out the best
                     in your crops and gardens.</p>
                 <a href="#products" class="btn btn-primary" data-i18n="hero_btn">Shop Now</a>
             </div>
             <div class="hero-image-wrapper">
-                <img src="paul_fertilizer_hero.png" alt="Paul Fertilizer Shop Storefront" class="hero-image">
+                <img src="paul_fertilizer_hero.png" alt="Paul Fertilizer Shop Storefront" class="hero-image" loading="lazy">
                 <div class="glass-card trust-badge">
                     <i class="fa-solid fa-award"></i>
                     <div>
@@ -152,21 +154,23 @@
                     <p data-i18n="login_subtitle">Enter your details to access your account</p>
                 </header>
 
-                <form id="loginForm">
+                <form id="loginForm" novalidate>
                     <div class="form-group">
                         <label for="email" data-i18n="label_email">Email Address</label>
                         <div class="input-wrapper">
                             <i class="fa-solid fa-envelope"></i>
                             <input type="email" id="email" placeholder="name@example.com" required>
                         </div>
+                        <span class="field-error hidden" id="emailError"></span>
                     </div>
 
                     <div class="form-group">
                         <label for="password" data-i18n="label_password">Password</label>
                         <div class="input-wrapper">
                             <i class="fa-solid fa-lock"></i>
-                            <input type="password" id="password" placeholder="••••••••" required>
+                            <input type="password" id="password" placeholder="••••••••" required minlength="6">
                         </div>
+                        <span class="field-error hidden" id="passwordError"></span>
                     </div>
 
                     <div class="form-options">
@@ -177,6 +181,7 @@
                     </div>
 
                     <button type="submit" class="btn btn-primary btn-login w-100" data-i18n="btn_signin">Sign In</button>
+                    <div id="loginStatus" class="form-status hidden"></div>
 
                     <div class="login-footer">
                         <span data-i18n="login_footer_text">Don't have an account?</span> <a href="#" data-i18n="link_create">Create Account</a>
@@ -202,13 +207,14 @@
                     <p data-i18n="contact_subtitle">Have questions? Send us a message and we'll get back to you soon.</p>
                 </header>
 
-                <form id="enquiryForm">
+                <form id="enquiryForm" novalidate>
                     <div class="form-group">
                         <label for="userName" data-i18n="label_name">Name</label>
                         <div class="input-wrapper">
                             <i class="fa-solid fa-user"></i>
                             <input type="text" id="userName" required placeholder="Enter your name" data-i18n-placeholder="placeholder_name">
                         </div>
+                        <span class="field-error hidden" id="userNameError"></span>
                     </div>
                     <div class="form-group">
                         <label for="userEmail" data-i18n="label_email">Email</label>
@@ -216,10 +222,12 @@
                             <i class="fa-solid fa-envelope"></i>
                             <input type="email" id="userEmail" required placeholder="Enter your email" data-i18n-placeholder="placeholder_email">
                         </div>
+                        <span class="field-error hidden" id="userEmailError"></span>
                     </div>
                     <div class="form-group">
                         <label for="userMessage" data-i18n="label_message">Message</label>
-                        <textarea id="userMessage" rows="4" required placeholder="What are you looking for?" data-i18n-placeholder="placeholder_message"></textarea>
+                        <textarea id="userMessage" rows="4" required minlength="10" placeholder="What are you looking for?" data-i18n-placeholder="placeholder_message"></textarea>
+                        <span class="field-error hidden" id="userMessageError"></span>
                     </div>
                     <button type="submit" class="btn btn-primary w-100" data-i18n="btn_submit">Send Message</button>
                     <div id="formStatus" class="form-status hidden"></div>
