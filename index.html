@@ -31,16 +31,17 @@
                         <option value="bn">বাংলা</option>
                     </select>
                 </div>
-                <button class="mobile-menu-btn" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="navLinks">
+                <button class="mobile-menu-btn" aria-label="Toggle Navigation">
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                 </button>
             </div>
-            <ul class="nav-links" id="navLinks" aria-hidden="true">
+            <ul class="nav-links">
                 <li><a href="#home" data-i18n="nav_home">Home</a></li>
                 <li><a href="#products" data-i18n="nav_products">Products</a></li>
                 <li><a href="#about" data-i18n="nav_about">About</a></li>
                 <li><a href="javascript:void(0)" class="nav-login" data-i18n="nav_login">Login</a></li>
-                <li><a href="javascript:void(0)" class="btn btn-outline nav-contact" data-i18n="nav_contact">Contact Us</a></li>
+                <li><a href="javascript:void(0)" class="btn btn-outline nav-contact" data-i18n="nav_contact">Contact
+                        Us</a></li>
             </ul>
         </div>
     </nav>
@@ -52,12 +53,13 @@
                     <span data-i18n="hero_title">Nourish Your Soil,</span><br>
                     <span data-i18n="hero_subtitle">Elevate Your Harvest.</span>
                 </h1>
-                <p data-i18n="hero_desc">Discover our premium selection of organic and specialized fertilizers designed to bring out the best
+                <p data-i18n="hero_desc">Discover our premium selection of organic and specialized fertilizers designed
+                    to bring out the best
                     in your crops and gardens.</p>
                 <a href="#products" class="btn btn-primary" data-i18n="hero_btn">Shop Now</a>
             </div>
             <div class="hero-image-wrapper">
-                <img src="paul_fertilizer_hero.png" alt="Paul Fertilizer Shop Storefront" class="hero-image" loading="lazy">
+                <img src="paul_fertilizer_hero.png" alt="Paul Fertilizer Shop Storefront" class="hero-image">
                 <div class="glass-card trust-badge">
                     <i class="fa-solid fa-award"></i>
                     <div>
@@ -83,7 +85,9 @@
             <div class="search-container glass-panel">
                 <div class="search-bar">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" id="searchInput" placeholder="Search for 'nitrogen', 'orchids', or product name..." data-i18n-placeholder="search_placeholder">
+                    <input type="text" id="searchInput"
+                        placeholder="Search for 'nitrogen', 'orchids', or product name..."
+                        data-i18n-placeholder="search_placeholder">
                 </div>
                 <div class="filter-group">
                     <select id="categoryFilter">
@@ -128,7 +132,8 @@
             </div>
             <div class="footer-contact">
                 <h4 data-i18n="footer_contact_title">Contact</h4>
-                <p><i class="fa-solid fa-location-dot"></i> <span data-i18n="address">chebri, khowai, tripura pin 799207</span></p>
+                <p><i class="fa-solid fa-location-dot"></i> <span data-i18n="address">chebri, khowai, tripura pin
+                        799207</span></p>
                 <p><i class="fa-solid fa-envelope"></i> hello@paulfertilizer.com</p>
                 <p><i class="fa-solid fa-phone"></i> +91 9089456405</p>
             </div>
@@ -180,11 +185,13 @@
                         <a href="#" class="forgot-password" data-i18n="link_forgot">Forgot Password?</a>
                     </div>
 
-                    <button type="submit" class="btn btn-primary btn-login w-100" data-i18n="btn_signin">Sign In</button>
+                    <button type="submit" class="btn btn-primary btn-login w-100" data-i18n="btn_signin">Sign
+                        In</button>
                     <div id="loginStatus" class="form-status hidden"></div>
 
                     <div class="login-footer">
-                        <span data-i18n="login_footer_text">Don't have an account?</span> <a href="#" data-i18n="link_create">Create Account</a>
+                        <span data-i18n="login_footer_text">Don't have an account?</span> <a href="#"
+                            data-i18n="link_create">Create Account</a>
                     </div>
                 </form>
             </div>
@@ -204,7 +211,8 @@
                         <span data-i18n="logo">Paul Fertilizer</span>
                     </div>
                     <h2 data-i18n="contact_title">Send an Enquiry</h2>
-                    <p data-i18n="contact_subtitle">Have questions? Send us a message and we'll get back to you soon.</p>
+                    <p data-i18n="contact_subtitle">Have questions? Send us a message and we'll get back to you soon.
+                    </p>
                 </header>
 
                 <form id="enquiryForm" novalidate>
@@ -212,7 +220,8 @@
                         <label for="userName" data-i18n="label_name">Name</label>
                         <div class="input-wrapper">
                             <i class="fa-solid fa-user"></i>
-                            <input type="text" id="userName" required placeholder="Enter your name" data-i18n-placeholder="placeholder_name">
+                            <input type="text" id="userName" required placeholder="Enter your name"
+                                data-i18n-placeholder="placeholder_name">
                         </div>
                         <span class="field-error hidden" id="userNameError"></span>
                     </div>
@@ -220,19 +229,53 @@
                         <label for="userEmail" data-i18n="label_email">Email</label>
                         <div class="input-wrapper">
                             <i class="fa-solid fa-envelope"></i>
-                            <input type="email" id="userEmail" required placeholder="Enter your email" data-i18n-placeholder="placeholder_email">
+                            <input type="email" id="userEmail" required placeholder="Enter your email"
+                                data-i18n-placeholder="placeholder_email">
                         </div>
                         <span class="field-error hidden" id="userEmailError"></span>
                     </div>
                     <div class="form-group">
                         <label for="userMessage" data-i18n="label_message">Message</label>
-                        <textarea id="userMessage" rows="4" required minlength="10" placeholder="What are you looking for?" data-i18n-placeholder="placeholder_message"></textarea>
+                        <textarea id="userMessage" rows="4" required minlength="10"
+                            placeholder="What are you looking for?"
+                            data-i18n-placeholder="placeholder_message"></textarea>
                         <span class="field-error hidden" id="userMessageError"></span>
                     </div>
                     <button type="submit" class="btn btn-primary w-100" data-i18n="btn_submit">Send Message</button>
                     <div id="formStatus" class="form-status hidden"></div>
                 </form>
             </div>
+        </div>
+    </div>
+
+    <div class="chatbot-widget" id="chatbotWidget">
+        <button class="chat-toggle" id="chatToggle" aria-label="Open chat assistant">
+            <i class="fa-solid fa-comments"></i>
+        </button>
+
+        <div class="chat-panel" id="chatPanel" aria-live="polite">
+            <div class="chat-header">
+                <div>
+                    <h3>Paul Assistant</h3>
+                    <p>Help with products and fertilizer advice</p>
+                </div>
+                <button class="chat-close" id="chatClose" aria-label="Close chat assistant">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot">
+                    Hello! I can help you choose the right fertilizer, suggest products for your crop or soil, and guide your purchase.
+                </div>
+            </div>
+
+            <form class="chat-input-row" id="chatForm">
+                <input type="text" id="chatInput" placeholder="Ask: best fertilizer for tomato or sandy soil" autocomplete="off">
+                <button type="submit" aria-label="Send message">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
         </div>
     </div>
 
